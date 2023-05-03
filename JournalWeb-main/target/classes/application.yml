@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/journalweb
+    password: ''
+  servlet:
+    multipart:
+      enabled: 'true'
+      max-request-size: 215MB
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: '8083'
+jwt:
+  secret: 2b44b0b00fd822d8ce753e54dac3dc4e06c2725f7db930f3b9924468b53194dbccdbe23d7baa5ef5fbc414ca4b2e64700bad60c5a7c45eaba56880985582fba4
+  expiration: '36000000'
